@@ -1,19 +1,22 @@
-// Setup empty JS object to act as endpoint for all routes
 projectData = {};
 
-// Require Express to run server and routes
+const express = require("express");
+const bodyParser = require("body-parser");
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-// Start up an instance of app
-
-/* Middleware*/
-//Here we are configuring express to use body-parser as middle-ware.
+// Middleware (optional, for JSON parsing)
+app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
 
-// Cors for cross origin allowance
+app.use(express.static("website"));
 
-// Initialize the main project folder
-app.use(express.static('website'));
+// Define a route
+app.get("/", (req, res) => {
+  res.send("Hello, Express!");
+});
 
-
-// Setup Server
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
