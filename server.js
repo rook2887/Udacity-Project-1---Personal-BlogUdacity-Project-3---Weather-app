@@ -15,13 +15,13 @@ app.get("/getData", (req, res) => {
 });
 
 app.post("/addData", (req, res) => {
-  const { temperature, date, userResponse } = req.body; 
+  const { temperature, date, userResponse } = req.body;
 
   // Add the received data to projectData
   projectData = {
-    temperature: temperature,
-    date: date,
-    userResponse: userResponse,
+    temperature,
+    date,
+    userResponse,
   };
 
   res.send({ message: "Data added successfully", data: projectData });
