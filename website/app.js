@@ -3,7 +3,7 @@
 const baseURL = "https://api.openweathermap.org/data/2.5/weather";
 const apiKey = ;
 
-// Async function to fetch weather data based on zip code.
+// Async function to fetch weather data based on zip code..
 // I first defined that the function is asynchronous with async.
 // I told the program to wait for the fetch result but also add await to tells the code to wait for the response from the API before moving on to the next line since it can take a awhile.
 async function getWeatherData(zip) {
