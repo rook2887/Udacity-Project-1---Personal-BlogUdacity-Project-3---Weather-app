@@ -45,6 +45,7 @@ document.getElementById("generate").addEventListener("click", async () => {
   const zipCode = document.getElementById("zip").value;
   const feelings = document.getElementById("feelings").value;
 
+  // try & catch for testing
   try {
     const weatherData = await getWeatherData(zipCode);
     const temperature = weatherData.main.temp;
@@ -62,9 +63,8 @@ document.getElementById("generate").addEventListener("click", async () => {
 
     // Update DOM UI
     document.getElementById("date").innerText = `Date: ${date}`;
-    document.getElementById(
-      "temp"
-    ).innerText = `Temperature: ${temperature} °C`;
+    // prettier-ignore
+    document.getElementById("temp").innerText = `Temperature: ${temperature} °C`;
     document.getElementById("content").innerText = `Feelings: ${feelings}`;
   } catch (error) {
     console.error("Error:", error);

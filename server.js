@@ -14,6 +14,7 @@ app.get("/getData", (req, res) => {
   res.send("Hello, Express!");
 });
 
+//tested with Postman
 app.post("/addData", (req, res) => {
   const { temperature, date, userResponse } = req.body;
 
