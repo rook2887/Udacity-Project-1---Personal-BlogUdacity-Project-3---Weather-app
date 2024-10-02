@@ -1,7 +1,7 @@
 /* Global Variables */
 // Baseurl + My API Key
 const baseURL = "https://api.openweathermap.org/data/2.5/weather";
-const apiKey = "";
+const apiKey = "be4bebaad09afa1fa6861ef4dee54cea";
 const postURL = "http://localhost:3000/addData";
 
 /* Async function to fetch weather data based on zip code. */
